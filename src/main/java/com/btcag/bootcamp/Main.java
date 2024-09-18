@@ -32,6 +32,8 @@ public class Main {
 
         //Fibonacci.start();
 
-        Kryptische_Zahlen.start();
+        //Kryptische_Zahlen.start();
+
+        //Alles_Gross.start();
     }
 }

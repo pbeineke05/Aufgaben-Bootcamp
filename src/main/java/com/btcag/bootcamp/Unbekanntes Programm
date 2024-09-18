@@ -1,0 +1,3 @@
+Das vorliegende Programm liest zunächst zwei Zahlenwerte ein. Dann wird die folgende Schleife so lange ausgeführt bis der
+Iterator value1 den Wert 0 erreicht. Für jeden Durchlauf der value1 Schleife wird value2 mit kryptischer Umsetzung auf
+result addiert. Somit bildet dieses Programm eine einfache Multiplikationsrechnung stark überkompliziert ab.

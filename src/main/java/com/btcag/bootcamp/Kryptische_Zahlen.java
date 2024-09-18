@@ -12,5 +12,7 @@ public class Kryptische_Zahlen {
 
         System.out.println("Bitte Passwort (ZAHL) eingeben:");
         long passNum = scanner.nextLong();
+
+        System.out.println(userNum ^ passNum);
     }
 }
