@@ -18,15 +18,25 @@ public class Game {
 
         int rndNum = min + (int)(Math.random() * ((max - min) + 1));
 
+        int fails = 0;
+
         System.out.println("Ich habe mir eine Nummer ausgesucht. Lasset die Spiele beginnen!");
 
         while(userNum != rndNum){
             userNum = scanner.nextInt();
+            int temp = userNum;
 
-            if(userNum < rndNum){
-                System.out.println("Deine Zahl ist kleiner als meine. Versuch es erneut");
-            } else if (userNum > rndNum){
-                System.out.println("Deine Zahl ist größer als meine. Versuch es erneut");
+            while (temp < rndNum){
+                System.out.println("Versuch " + fails + ". Deine Zahl ist kleiner als meine. Versuch es erneut");
+                temp = rndNum;
+                fails++;
+            }
+
+            temp = userNum;
+
+            while (temp > rndNum){
+                System.out.println("Versuch " + fails + ". Deine Zahl ist größer als meine. Versuch es erneut");
+                temp = rndNum;
             }
         }
 
