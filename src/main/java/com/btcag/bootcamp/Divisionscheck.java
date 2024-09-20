@@ -13,11 +13,17 @@ public class Divisionscheck {
         System.out.println("Bis zu welcher Zahl?");
         long userNum = scanner.nextLong();
 
-        long temp = 0L;
+        division(userNum, divisor);
+    }
 
-        while(temp < userNum){
-            System.out.println(temp);
+    public static long division(long max, long divisor) {
+        long temp = 0L, counter = 0L;
+        temp += divisor;
+        while(temp <= max){
+            counter++;
             temp += divisor;
         }
+
+        return counter;
     }
 }

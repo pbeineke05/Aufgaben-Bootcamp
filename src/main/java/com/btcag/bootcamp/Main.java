@@ -35,5 +35,9 @@ public class Main {
         //Kryptische_Zahlen.start();
 
         //Alles_Gross.start();
+
+        //Supermarkt.start();
+
+        Subnetting.start();
     }
 }
