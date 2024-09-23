@@ -1,5 +1,6 @@
 package com.btcag.bootcamp;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
@@ -8,23 +9,28 @@ public class Game {
 
         int userNum = -1;
 
-        System.out.println("Nenne die untere Schranke");
+        System.out.println("Wie groß soll die Zahl in Bits sein?");
 
-        int min = scanner.nextInt();
+        int bitCount = scanner.nextInt(), tempBinary = 1;
 
-        System.out.println("Nenne die obere Schranke");
-
-        int max = scanner.nextInt();
-
-        int rndNum = min + (int)(Math.random() * ((max - min) + 1));
+        int rndNum = new Random().nextInt();
+        while (bitCount-- > 0) {
+            tempBinary *= 2;
+        }
+        while (rndNum < 0) {
+            rndNum += 2 * rndNum;
+        }
+        while (rndNum > tempBinary) {
+            rndNum = rndNum>>1;
+        }
 
         int fails = 0;
 
-        System.out.println("Ich habe mir eine Nummer ausgesucht. Lasset die Spiele beginnen!");
+        System.out.println("Ich habe mir eine Nummer zwischen 1 und " + tempBinary + " ausgesucht. Lasset die Spiele beginnen!");
 
         while(userNum != rndNum){
             userNum = scanner.nextInt();
-            int temp = userNum;
+            long temp = userNum;
 
             while (temp < rndNum){
                 System.out.println("Versuch " + fails + ". Deine Zahl ist kleiner als meine. Versuch es erneut");
